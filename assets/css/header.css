@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0 1rem;
+  z-index: 1;
+  background-color: var(--gray-50);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-container h1 {
+  font-size: 2rem;
+  margin-right: 4rem;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.perfil-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 4rem;
+}

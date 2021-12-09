@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/images-container.css">
+  <link rel="stylesheet" href="./assets/css/about-content-container.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <header class="header"> 
+    <div class="wrapper">
+      
+      <nav class="nav-container">
+        <h1>sneakers</h1>
+
+        <ul>
+          <li>
+            <a href="">Collections</a>
+          </li>
+          <li>
+            <a href="">Men</a>
+          </li>
+          <li>
+            <a href="">Women</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="cart-container">
+        <img class="cart-icon" src="./assets/images/icon-cart.svg" alt="imagem de um carrinho de compra">
+        <img class="perfil-icon" src="./assets/images/image-avatar.png" alt="imagem do perfil">
+      </div>
+
+    </div>
+  </header>
+
+  <div class="modal-container">
+    <div class="modal-overlay" onclick="closeModal()">
+      
+    </div>
+
+    <div class="modal-content">
+
+      <div class="images-container">
+
+        <button type="button" class="close-modal" onclick="closeModal()">
+          <img src="./assets/images/icon-close.svg" alt="fechar modal">
+        </button>
+
+        <div class="highlighted-image-container" onclick="openModal()">
+
+          <button type="button" class="back-image arrow-button" onclick="handleBackImageModal()"> 
+            <img src="./assets/images/icon-previous.svg" alt="exibir imagem anterior">
+          </button>
+
+          <img class="highlighted-image-modal" src="./assets/images/image-product-1.jpg" alt="imagem do produto">
+
+          <button type="button" class="next-image arrow-button" onclick="handleNextImageModal()"> 
+            <img src="./assets/images/icon-next.svg" alt="exibir próxima imagem">
+          </button> 
+        </div>
+  
+        <div class="all-images-container">
+  
+          <div class="image-item-modal-highlighted item-modal">
+            <img src="./assets/images/image-product-1-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item-modal item-modal">
+            <img src="./assets/images/image-product-2-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item-modal item-modal">
+            <img src="./assets/images/image-product-3-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item-modal item-modal">
+            <img src="./assets/images/image-product-4-thumbnail.jpg" alt="imagem do produto">
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main-content-container">
+    <main class="main-content">
+
+      <div class="images-container">
+  
+        <div class="highlighted-image-container" onclick="openModal()">
+          <img class="highlighted-image" src="./assets/images/image-product-1.jpg" alt="imagem do produto">
+        </div>
+  
+        <div class="all-images-container">
+  
+          <div class="image-item-highlighted item">
+            <img src="./assets/images/image-product-1-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item item">
+            <img src="./assets/images/image-product-2-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item item">
+            <img src="./assets/images/image-product-3-thumbnail.jpg" alt="imagem do produto">
+          </div>
+  
+          <div class="image-item item">
+            <img src="./assets/images/image-product-4-thumbnail.jpg" alt="imagem do produto">
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="about-product-container">
+        <div class="about-product-content">
+          <h3> sneaker company </h3>
+          <h1> Fall Limited Edition Sneakers </h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint cupiditate ratione? Tempore, optio tenetur. Perferendis consequatur repellat sit consequuntur rem.</p>
+  
+          <div class="product-price">
+            <span class="bold-price"> $125.00 </span>
+            <span class="marked-price"> 50% </span>
+          </div>
+  
+          <span class="old-product-price"> $250.00 </span>
+  
+        </div>
+  
+        <div class="add-to-cart-container">
+          <div class="quantity-of-container-product">
+            <span class="minus-icon" onclick="decrementQuantityOfProducts()"> <img src="./assets/images/icon-minus.svg" alt="tirar um produto"> </span>
+            <span class="quantity-of-products">1</span>
+            <span class="plus-icon" onclick='incrementQuantityOfProducts()'> <img src="./assets/images/icon-plus.svg" alt="adicionar mais um produto"> </span>
+          </div>
+  
+          <button class="add-to-cart-button" >
+            <img src="./assets/images/icon-cart.svg" alt="icone do carrinho de compras">
+            Add to cart
+          </button>
+  
+        </div>
+      </div>
+  
+    </main>
+  </div>
+
+  <script>
+
+    const modalContainer = document.querySelector(".modal-container");
+    const quantityOfProducts = document.querySelector(".quantity-of-products");
+
+    const highlightedImage = document.querySelector('.highlighted-image');
+    const highlightedImageModal = document.querySelector('.highlighted-image-modal');
+
+    const allImagesItemContainer = document.querySelectorAll('.item');
+    const allImagesItemModalContainer = document.querySelectorAll('.item-modal');
+    
+
+    let highlightedImageSrc = './assets/images/image-product-1.jpg';
+    
+    const imgArray = [
+      './assets/images/image-product-1-thumbnail.jpg',
+      './assets/images/image-product-2-thumbnail.jpg',
+      './assets/images/image-product-3-thumbnail.jpg',
+      './assets/images/image-product-4-thumbnail.jpg',
+    ];
+
+
+    document.addEventListener('click',(event) => {
+      const image = event.target;
+      const src = image.getAttribute('src');
+      let isSrcThumbnailInImageArray = false;
+
+      if (!src) {
+        return;
+      }
+
+      imgArray.forEach((srcThumbnail)=> {
+        if (srcThumbnail === src) {
+          isSrcThumbnailInImageArray = true;
+        } 
+      })
+
+      if (!isSrcThumbnailInImageArray) {
+        return;
+      }
+
+      allImagesItemContainer.forEach((item) => {
+        let itemSrc = item.children[0].getAttribute('src');
+
+        if (itemSrc === src) {
+          highlightedImageSrc = itemSrc.replace('-thumbnail', '');
+
+          item.classList = 'image-item-highlighted';
+          highlightedImage.setAttribute('src', itemSrc.replace('-thumbnail', ''));
+          highlightedImageModal.setAttribute('src', itemSrc.replace('-thumbnail', ''));
+          
+          allImagesItemModalContainer.forEach((item) => {
+            if (item.children[0].getAttribute('src') === itemSrc) {
+              item.classList = 'image-item-modal-highlighted item-modal';
+              
+            } else {
+              item.classList = 'image-item-modal item-modal'
+            }
+          })
+          
+        } else {
+          item.classList = 'image-item';
+        }
+
+      })
+
+    });
+
+  </script>
+
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/quantityOfProducts.js"></script>
+
+</body>
+</html>
