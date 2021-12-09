@@ -1,6 +1,21 @@
 .about-product-container {
+  max-width: 367px;
   width: 100%;
   margin-left: 10rem;
+}
+
+@media (max-width: 800px) {
+  .about-product-container {
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-product-container {
+    margin-left: 0;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .about-product-content h3 {
@@ -93,6 +108,7 @@
   border-radius: 0.8rem;
   transition: all 0.2s;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .add-to-cart-button img {

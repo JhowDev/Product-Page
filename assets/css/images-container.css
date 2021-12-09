@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+@media (max-width: 400px) {
+  .highlighted-image-container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
 .highlighted-image-container img {
   width: 100% ;
 }
@@ -14,6 +21,13 @@
   gap: 2rem;
   margin-top: 2rem;
 }
+
+@media (max-width: 400px) {
+  .all-images-container {
+    display: none;
+  }
+}
+  
 
 .image-item {
   display: flex;

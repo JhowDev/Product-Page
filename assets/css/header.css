@@ -22,6 +22,28 @@
   align-items: center;
 }
 
+.hamburguer-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-container .nav-links {
+    display: none;
+  }
+
+  .nav-container .hamburguer-menu {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../images/icon-menu.svg');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 0 2rem;
+    margin-top: 0.2rem;
+  }
+}
+
 .nav-container ul {
   display: flex;
   align-items: center;
@@ -33,9 +55,28 @@
   margin-right: 4rem;
 }
 
+@media (max-width: 600px) {
+  .nav-container h1 {
+    font-size: 3rem;
+  }
+}
+
 .cart-container {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  .cart-container .cart-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .cart-container .perfil-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+  }
 }
 
 .cart-icon {
@@ -48,3 +89,4 @@
   height: 4rem;
   margin-left: 4rem;
 }
+
