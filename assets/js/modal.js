@@ -1,5 +1,9 @@
 function openModal() {
-  modalContainer.style.display = 'flex';
+  const width = window.screen.width;
+
+  if (width > 400) {
+    modalContainer.style.display = 'flex';
+  }
 }
 
 function closeModal() {

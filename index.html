@@ -108,7 +108,15 @@
       <div>
   
         <div class="highlighted-image-container" onclick="openModal()">
+          <button class="back-button" onclick="handleBackImageModal()">
+            <img src="assets/images/icon-previous.svg" alt="botão que retorna uma imagem">
+          </button>
+
           <img class="highlighted-image" src="./assets/images/image-product-1.jpg" alt="imagem do produto">
+
+          <button class="next-button" onclick="handleNextImageModal()">
+            <img src="assets/images/icon-next.svg" alt="botão que avança uma imagem">
+          </button>
         </div>
   
         <div class="all-images-container">
@@ -137,14 +145,16 @@
           <h3> sneaker company </h3>
           <h1> Fall Limited Edition Sneakers </h1>
           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sint cupiditate ratione? Tempore, optio tenetur. Perferendis consequatur repellat sit consequuntur rem.</p>
-  
-          <div class="product-price">
-            <span class="bold-price"> $125.00 </span>
-            <span class="marked-price"> 50% </span>
+          
+          <div class="prices-container">
+            <div class="product-price">
+              <span class="bold-price"> $125.00 </span>
+              <span class="marked-price"> 50% </span>
+            </div>
+    
+            <span class="old-product-price"> $250.00 </span>
           </div>
-  
-          <span class="old-product-price"> $250.00 </span>
-  
+
         </div>
   
         <div class="add-to-cart-container">
