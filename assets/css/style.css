@@ -113,6 +113,36 @@ a {
   }
 }
 
+@media (max-width: 315px) {
+  .back-button {
+    top: 22rem;
+  }
+
+  .next-button {
+    top: 22rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .back-button {
+    top: 21rem;
+  }
+
+  .next-button {
+    top: 21rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .back-button {
+    top: 20rem;
+  }
+
+  .next-button {
+    top: 20rem;
+  }
+}
+
 .next-button img {
   width: 1.5rem;
   height: 1.5rem;

@@ -21,11 +21,16 @@
     <div class="wrapper">
       
       <nav class="nav-container">
-        <button class="hamburguer-menu">  </button>
+        <button class="hamburguer-menu" onclick="handleOpenMenu()">  </button>
 
         <h1>sneakers</h1>
 
         <ul class="nav-links">
+
+          <button type="button" class="close-menu-button" onclick="handleCloseMenu()">
+            <img src="assets/images/icon-close.svg" alt="botão de fechar">
+          </button>
+
           <li>
             <a href="">Collections</a>
           </li>
@@ -179,6 +184,7 @@
 
     const modalContainer = document.querySelector(".modal-container");
     const quantityOfProducts = document.querySelector(".quantity-of-products");
+    const navLinks = document.querySelector('.nav-links');
 
     const highlightedImage = document.querySelector('.highlighted-image');
     const highlightedImageModal = document.querySelector('.highlighted-image-modal');
@@ -243,6 +249,13 @@
 
     });
 
+    function handleOpenMenu() {
+      navLinks.classList.add('nav-links-mobile');
+    }
+
+    function handleCloseMenu() {
+      navLinks.classList.remove('nav-links-mobile');
+    }
   </script>
 
   <script src="assets/js/modal.js"></script>
